@@ -1,3 +1,9 @@
+use bevy::prelude::*;
+
+pub mod client;
+
 fn main() {
-    println!("Hello, world!");
+    App::new()
+        .add_plugins((client::client::ClientPlugin, DefaultPlugins))
+        .run();
 }
